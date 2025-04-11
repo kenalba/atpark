@@ -1,0 +1,47 @@
+{
+  "lexicon": 1,
+  "id": "app.dogpark.photo",
+  "defs": {
+    "main": {
+      "type": "record",
+      "key": "tid",
+      "record": {
+        "type": "object",
+        "required": ["image", "createdAt"],
+        "properties": {
+          "image": {
+            "type": "string",
+            "description": "URL or reference to the photo"
+          },
+          "thumbnail": {
+            "type": "string",
+            "description": "URL or reference to a thumbnail version"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Dog names, breeds, or other tags"
+          },
+          "location": {
+            "type": "string",
+            "description": "Name of the dog park or location"
+          },
+          "visibility": {
+            "type": "string",
+            "enum": ["public", "private", "shared"],
+            "default": "public"
+          },
+          "description": {
+            "type": "string"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "datetime"
+          }
+        }
+      }
+    }
+  }
+}

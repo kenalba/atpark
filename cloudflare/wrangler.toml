@@ -1,0 +1,15 @@
+name = "atpark-upload-worker"
+main = "upload-worker.js"
+compatibility_date = "2023-01-01"
+
+# Configure your account ID
+account_id = "8da2baf8db2e5f267e61df5191189280"
+
+# Configure R2 bucket binding
+[[r2_buckets]]
+binding = "BUCKET" # This name is used in the worker code
+bucket_name = "atpark-images"
+
+# Environment variables
+[vars]
+PUBLIC_BUCKET_URL = "https://pub-d50331b516e649c18bac6d9b91c7fb3e.r2.dev"

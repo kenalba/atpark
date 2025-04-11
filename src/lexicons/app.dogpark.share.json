@@ -1,0 +1,36 @@
+{
+  "lexicon": 1,
+  "id": "app.dogpark.share",
+  "defs": {
+    "main": {
+      "type": "record",
+      "key": "tid",
+      "record": {
+        "type": "object",
+        "required": ["photoUri", "sharedWith", "createdAt"],
+        "properties": {
+          "photoUri": {
+            "type": "string",
+            "description": "URI of the shared photo"
+          },
+          "sharedWith": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "DIDs of users with access"
+          },
+          "expiresAt": {
+            "type": "string",
+            "format": "datetime",
+            "description": "Optional expiration date"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "datetime"
+          }
+        }
+      }
+    }
+  }
+}

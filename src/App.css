@@ -1,0 +1,26 @@
+/* App-specific styles */
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000000;
+  color: white;
+}
+
+.content {
+  padding-top: 64px; /* Height of the navbar */
+}
+
+/* Auth-related styles */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #000000;
+}
+
+/* Protected route wrapper */
+.protected-route {
+  min-height: 100vh;
+  background-color: #000000;
+}
